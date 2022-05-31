@@ -2,19 +2,28 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
+  - name: users_table
+    description: "Users table which stores all the data of the user"
     columns:
-      - name: id
+      - name: ID
         description: "The primary key for this table"
         tests:
           - unique
           - not_null
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
+  - name: posts_table
+    description: "Posts table which stores all the post details of the user"
     columns:
-      - name: id
+      - name: ID
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: badges_table
+    description: "Badges table which stores all the badge details of the user"
+    columns:
+      - name: ID
         description: "The primary key for this table"
         tests:
           - unique
